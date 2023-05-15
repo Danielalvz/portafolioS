@@ -78,7 +78,7 @@ section {
     background-color: aliceblue;
     height: auto;
     border-radius: 40px;
-    font-size: 20px;
+    font-size: 19px;
     align-items: center;
     justify-content: center;
 }
@@ -220,7 +220,6 @@ pre {
 
 .listaProyectos .fondoPar {
     background-color: rgb(58, 66, 83);
-    color: white;
 }
 
 .listaProyectos .fondoImpar {
@@ -233,6 +232,15 @@ pre {
 
 .listaProyectos>li:active {
     background-color: gray;
+}
+
+.enlaceProyectos {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.637);
+}
+
+.enlacePar {
+    color: rgb(255, 255, 255);
 }
 
 /*--------------------------*/

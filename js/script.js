@@ -17,15 +17,10 @@ const button = (elemento, link) => {
 const portafolio = () => {
     const lista = document.querySelector('.listaProyectos');
     const items = lista.getElementsByTagName('li');
+    const itemsEnlace = lista.getElementsByTagName('a');
 
     agregaColorListas(items);
-
-   button(items[0], "../html/pseint/pseint.html")
-   button(items[1], "../html/java/java.html")
-   button(items[2], "../html/htmlProject/html.html")
-   button(items[3], "../html/cssProject/cssProject.html")
-   button(items[4], "../html/jsProject/jsProject.html")
-  
+    agregaColorTexto(itemsEnlace);
 }
 
 const pseint = () => {
@@ -44,9 +39,9 @@ const pseint = () => {
 const java = () => {
     const lista = document.querySelector('.listaJava');
     const items = lista.getElementsByTagName('li');
-
+    
     agregaColorListas(items);
-
+   
     button(items[0], "javaVariables.html")
     button(items[1], "javaCondicionales.html")
     button(items[2], "javaCiclos.html")
@@ -61,6 +56,14 @@ const agregaColorListas = (items) => {
             items[i].classList.add('fondoPar');
         } else { //IMPAR
             items[i].classList.add('fondoImpar');
+        }
+    }
+}
+
+const agregaColorTexto = (items) => {
+    for (let i = 0; i < items.length; i++) {
+        if (i % 2 === 0) { //PAR
+            items[i].classList.add('enlacePar');
         }
     }
 }
