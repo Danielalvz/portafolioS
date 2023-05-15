@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../css/estiloPortafolio.css">
+    <script src="../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../index.html">Home</a>
+                <a class="linkNav" href="../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Ejercicio de variables</h2>
+            <a class="linkProyectos" href="./pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Ejercicios</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>1. Realizar un programa el cual solicite su nombre y apellidos.</p>
+                    <p>2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+                    <p>3. Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y
+                        apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo
+                        [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p>
+                    <p>4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar
+                        debe
+                        imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del
+                        país
+                        [Nombre del País]</p>
+                    <p>5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de
+                        mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente
+                        mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota]
+                        años de
+                        edad y [Nombre Completo] es actualmente su dueño(a).</p>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso  tallerVariablesCompleto
+             
+        Definir nombre, apellido, nombreMadre, apellidoMadre, 
+            nombrePadre, apellidoPadre, ciudad, pais, 
+            nombreMascota, tipoMascota, respuestaMascota 
+            Como Caracter;
+        Definir edad, edadMascota Como Entero;
+        Definir  estatura Como Real;
+                            
+        //Parte 1
+        Escribir "Indique su nombre";
+        Leer nombre;
+                            
+        Escribir "Indique su apellido";
+        Leer apellido;
+        Limpiar Pantalla;
+                            
+        //Parte 2
+        Escribir "Indique su edad";
+        Leer edad;
+                            
+        Escribir "Indique su estatura";
+        Leer estatura;
+        Limpiar Pantalla;
+                            
+        //Parte 3
+        Escribir "Cual es el nombre de su madre?";
+        Leer nombreMadre;
+                            
+        Escribir "Indique tambien sus apellidos";
+        Leer apellidoMadre;
+                            
+        Escribir "Cual es el nombre de su padre?";
+        Leer nombrePadre;
+                            
+        Escribir "Indique tambien sus apellidos";
+        Leer apellidoPadre;
+                            
+        Escribir "Yo ", nombre, " ", apellido, " soy hijo/a de ", 
+            nombreMadre," ", apellidoMadre, " y de ", nombrePadre, 
+            " ", apellidoPadre;
+                            
+        //Parte 4
+        Escribir "Indique el nombre de una ciudad capital: ";
+        Leer ciudad;
+                            
+        Escribir "Ahora ingrese el país correspondiente a dicha ciudad:";
+        Leer pais;
+                            
+        Escribir "La ciudad de ", ciudad, " es la capital del país ", 
+        pais;
+                            
+        //Parte 5
+        Escribir "Usted tiene mascotas?";
+        Leer respuestaMascota;
+        respuestaMascota <- Minusculas(respuestaMascota);
+        Limpiar Pantalla;
+                            
+        Si (respuestaMascota == 'si') Entonces
+        Escribir "Cual es el nombre de su mascota?";
+        Leer nombreMascota;
+                                
+        Escribir "Indique la edad de su mascota";
+        Leer edadMascota;
+                                
+        Escribir "De que tipo de animal o raza es su mascota?";
+        Leer tipoMascota;
+                                
+        Escribir "Su mascota: ", nombreMascota, " es un/a ",
+            tipoMascota, " el/la cual tiene ", edadMascota,
+            " años de edad. ";
+        Escribir "Y ", nombre, " ", apellido, 
+            " es actualmente su dueño.";
+                            
+        SiNo
+            Escribir "Usted no tiene mascota, este campo no aplica, 
+                gracias por su tiempo.";
+        FinSi
+     FinProceso
+             
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Video explicativo</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1GrRVJPO5rU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+
+</html>

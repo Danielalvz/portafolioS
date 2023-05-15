@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <select id="selectorColores" class="colores">
+                <option disabled>Seleccione un color</option>
+                <option class="caja"  value="1">Verde</option>
+                <option class="naranja" value="2">Naranja</option>
+                <option class="azul" value="3">Azul</option>
+                <option class="morado" value="4">Morado</option>
+            </select>
+            <h1>
+                <img id="foto" src="imagenes/foto.jpg" alt="Foto hoja de vida">
+            </h1>
+            
+            <p id="perfil"><em><strong>Daniela Lozano Vásquez</strong></em></p> 
+            
+            <nav>
+                <ul id="menu">
+                    <li><a class="itemsMenu" href="index.html">Perfíl</a></li>
+                    <li><a class="itemsMenu" href="experiencia.html">Experiencia</a></li>
+                    <li><a class="itemsMenu" href="referenciasPersonales.html">Referencias Personales</a></li>
+                    <li><a class="itemsMenu" href="referenciasFamiliares.html">Referencias Familiares</a></li>
+                    <li><a class="itemsMenu" href="estudios.html">Estudios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <p><strong> Estudios</strong></p>
+            <hr>
+            <div class="descripcion" id="descripcion">
+                <button class="acordeon" type="button">
+                    <h4>Diplomado en Desarrollo de Aplicaciones Web</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                <div class="panel">
+                    <h5>UNIVERSIDAD INDUSTRIAL DE SANTANDER - MISIONTIC 2022 <br><br> ABRIL 2022 - NOV 2022 </h5>
+                    <p>Uso de tecnologias y herramientas como Java, Bases de datos relacionales con MySQL y SQLite, y Springboot.
+                        Bases de datos no relacionles, con MongoDB, NodeJs y Javascript, junto a React, HTML y CSS. Manejo de Git
+                        y Github. Uso de Jira, creación de historias de usuario y trabajo en equipo.</p>
+                </div>
+                
+                <button class="acordeon" type="button">
+                    <h4>Profesional en Negocios Internacionales</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>UNIVERSIDAD DEL TOLIMA<br><br>ENER 2015 - JUN 2020</h5>
+                    <p>Actividades y grupos: Proyecto de grado de Logística Urbana en Ibagué con el Grupo de Investigación en Mercadeo y 
+                        Negocios GIMN (2019-2020).</p>
+                </div>
+                
+                <button class="acordeon" type="button">
+                    <h4>Tecnica en Gestión Contable y Financiera</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>SENA<br><br>ENER 2013- NOV 2014</h5>
+                    <p>Prácticas como pasante bachiller técnica SENA, de Auxiliar Contable realizando funciones como documentación, 
+                        registro de operaciones contables y atención al cliente.</p>
+                </div>
+            </div>
+            
+            <div class="descripcion">
+                <p id="cursosCompementarios"><strong> Cursos complementarios con certificado</strong></p>
+                <hr>
+
+                <button class="acordeon" type="button">
+                    <h4>Bootcamp Automatización QA (RutaN y Sophos Solutions)</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel"><h5>OCT 2022 - FEB 2023</h5></div>
+                
+                <button class="acordeon" type="button">
+                    <h4>Desarrollo de Software, Backend y Frontend (Programa Oracle One-Alura)</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel"><h5>JUL 2022 - ENER 2023</h5> </div>            
+            </div>
+            <br>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy Derechos reservados <br> Daniela Lozano Vasquez.</small></p>
+    </footer>
+    <script>funciones()</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código numeros primos</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintArreglos.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <a class="linkProyectos" href="../pseintFunciones.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Volver a ejercicios de funciones
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+        Proceso tallerArreglos3
+        
+            Definir num, i, contador Como Entero;
+            
+            Escribir "Numeros primos: ";
+            Para i<- 1 Hasta 1000 Hacer
+                num<-1;
+                contador<-0;
+                
+                Mientras  num <= i Hacer
+                    Si i mod num == 0 Entonces
+                        contador<- contador+1;
+                    FinSi
+                    num<-num+1;
+                FinMientras
+                
+                Si contador == 2 Entonces
+                    Escribir Sin Saltar i, " ";
+                FinSi
+            FinPara
+        
+        FinProceso
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código en funciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+        Proceso tallerFuncionesArreglos3
+
+            Definir limite Como Entero;
+            
+            limite<-1000;
+            
+            Escribir "Numeros primos entre 1 y ", limite;
+            calcularNumerosPrimos(limite);
+        FinProceso
+        
+        SubProceso calcularNumerosPrimos(limite)
+            Definir i, num, contador Como Entero;
+            
+            Para i<- 1 Hasta limite Hacer
+                num<-1;
+                contador<-0;
+                
+                Mientras  num <= i Hacer
+                    Si i mod num == 0 Entonces
+                        contador<- contador+1;
+                    FinSi
+                    num<-num+1;
+                FinMientras
+                
+                Si contador == 2 Entonces
+                    Escribir Sin Saltar i, " ";
+                FinSi
+            FinPara	
+        FinSubProceso
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>

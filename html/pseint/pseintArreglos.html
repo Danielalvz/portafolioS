@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../css/estiloPortafolio.css">
+    <script src="../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../imagenes/bot.gif" alt="Imagend e una computadora animada">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../index.html">Home</a>
+                <a class="linkNav" href="../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ejercicio de arreglos</h2>
+            <a class="linkProyectos" href="./pseint.html">
+                <i  id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Lista simple</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p>
+                        1. Crear un vector de tipo Entero con 5 posiciones, 
+                        llenarlo con información solicitada al usuario. Después de 
+                        recoger toda la información, se requiere imprimir el índice 
+                        de cada posición en el arreglo con su valor de la siguiente 
+                        manera:
+                    </p>
+    
+                    <a class="linkCodigo" href="arreglos/lista.html">
+                        <img class="imgPequenaEjercicio" src="../../imagenes/listaUnidad.jpg" 
+                        alt="Imagen de lista simple con 5 posiciones"><br>
+                        Ver codigo, punto 1.
+                    </a>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Arreglo de números enteros</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p>
+                        2. Crear un arreglo de números enteros de 20 posiciones, el 
+                        cual, debe ser llenado con números aleatorios entre 1 y 100; 
+                        después de haber llenado dicho arreglo, se debe volver a 
+                        recorrer utilizando un ciclo diferente al que se usó para 
+                        llenarse e imprimir los números pares e impares. Ejemplo
+                    </p>
+                    <p>
+                        Números pares: 2, 4, 6, 8, 10 <br>
+                        Números impares: 1, 3, 5, 7, 9
+                    </p>
+    
+                    <a class="linkCodigo" href="arreglos/enteros.html">Ver codigo, punto 2.</a>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Números primos</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p>
+                        3. Imprimir los números primos del 1 al 1000, el resultado 
+                        debe ser buscado de forma matemática.
+                    </p>
+    
+                    <a class="linkCodigo" href="arreglos/primos.html">Ver codigo, punto 3.</a>
+                </div>
+                
+                <button class="acordeon" type="button">
+                    <h4>Matriz bidimensional en orden variado</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p>
+                        4. Dada la siguiente matriz bidimensional, el cual debe 
+                        de quemar en el código
+                    </p>
+    
+                    <a class="linkCodigo" href="arreglos/matrizVariada.html">
+                        <img class="imgPequenaEjercicio" src="../../imagenes/matriz1.jpg" 
+                        alt="Matriz con orden de 1 a 20">
+                    </a>
+
+                    <p>
+                        Utilizando el conocimiento adquirido, a excepción de hacerlo 
+                        de forma manual, imprima la siguiente matriz bidimensional.                    
+                    </p>
+
+                    <a class="linkCodigo" href="arreglos/matrizVariada.html">
+                        <img class="imgPequenaEjercicio" src="../../imagenes/matriz2.jpg" 
+                        alt="Matriz con orden de 1 a 20, en orden de filas ascendente y descendente"><br>
+                        Ver codigo, punto 4.
+                    </a>  
+                </div>
+                
+                <button class="acordeon" type="button">
+                    <h4>Matriz bidimensional de multiplicación</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p> 5. Se debe de imprimir el siguiente cuadro</p>
+    
+                    <a class="linkCodigo" href="arreglos/matrizMultiplica.html">
+                        <img class="imgEjercicio" src="../../imagenes/matrizMultiplica.png" 
+                        alt="Matriz bidimensional con numero de filas y columnas, del 1 al 10, con su multiplicación">
+                    </a>
+
+                    <p>
+                        El usuario deberá insertar la fila y columna de la cual desea 
+                        ver el resultado, el resultado de cada celda debe estar 
+                        previamente calculado en una matriz bidimensional la cual 
+                        cada resultado obedecerá a la fila y columna insertada por 
+                        el usuario.
+                    </p>
+
+                    <a class="linkCodigo" href="arreglos/matrizMultiplica.html">Ver codigo, punto 5.</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>

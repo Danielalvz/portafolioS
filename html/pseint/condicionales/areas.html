@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código cálculo de áreas de figuras</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintCondicionales.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <a class="linkProyectos" href="../pseintFunciones.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Volver a ejercicios de funciones
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerCondicionales9
+
+        Definir figura Como Caracter;
+        Definir opcion Como Entero;
+        Definir area, base, baseLado, altura Como Real;
+        
+        Escribir "Bienvenidos al calculador de área de diferentes figuras.";
+    
+        Repetir
+            Escribir "Digite 1 para consultar áreas y 2 para salir del 
+                programa.";
+            Leer opcion;
+            Si opcion = 1 Entonces
+                Escribir "Para iniciar, escriba que tipo de figura 
+                    desea conocer su área: rectángulo, triángulo o 
+                    trapecio.";
+                Leer figura;
+                figura<-Minusculas(figura);
+                
+                Si figura <> "rectangulo" Y figura <> "rectángulo" 
+                    Y figura <> "triángulo" Y figura <> "triangulo" 
+                    Y figura <> "trapecio" Entonces
+                    Escribir "No tenemos disponible esta figura para 
+                        poder hallar su área, lo sentimos.";
+                    area<-0;
+                SiNo
+                    Escribir "Para hallar el área de un ", figura, 
+                        " por favor digite la base o el ancho de este: ";
+                    Leer base;
+                    Escribir "Támbien digite su altura, o el largo del ", 
+                        figura, ": ";
+                    Leer altura;
+                FinSi
+                
+                Si figura = "rectángulo" O figura = "rectangulo" Entonces
+                    area<-base*altura;
+                FinSi
+                Si figura = "triángulo" O figura = "triangulo" Entonces
+                    area<-(base*altura)/2;
+                FinSi
+                Si figura = "trapecio" Entonces
+                    Escribir "Digite el otro lado o base de su trapecio: ";
+                    Leer baseLado;
+                    area<-((base+baseLado)*altura)/2;
+                FinSi
+                
+                Escribir "El área del ", figura, " es de: ", area;
+            FinSi
+            
+        Hasta Que opcion = 2;
+        
+        Escribir "Gracias por usar nuestro programa!";
+    FinProceso
+                        
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código en funciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerFuncionesCondicionales9
+
+        Definir figura Como Caracter;
+        Definir opcion Como Entero;
+        Definir area, altura Como Real;
+        
+        Escribir "Bienvenidos al calculador de área de diferentes figuras.";
+        
+        Repetir
+            opcion<-imprimirMenu();
+    
+            Si opcion = 1 Entonces
+                figura<-registroFigura();
+                
+                area<-calcularArea(figura);
+                
+                Escribir "El área del ", figura, " es de: ", area;
+            FinSi
+            
+        Hasta Que opcion = 2;
+        
+        Escribir "Gracias por usar nuestro programa!";
+    FinProceso
+    
+    SubProceso opcion<-imprimirMenu()
+        Definir opcion Como Entero;
+        
+        Escribir "Digite 1 para consultar áreas y 2 para salir del 
+            programa.";
+        Leer opcion;
+    FinSubProceso
+    
+    SubProceso figura<-registroFigura()
+        Definir figura Como Caracter;
+        
+        Escribir "Para iniciar, escriba que tipo de figura desea conocer 
+            su área: rectángulo, triángulo o trapecio.";
+        Leer figura;
+        figura<-Minusculas(figura);
+    FinSubProceso
+    
+    SubProceso area<-calcularArea(figura)
+        Definir area, base, altura, baseLado Como Real;
+        
+        Si figura <> "rectangulo" Y figura <> "rectángulo" Y figura <> 
+            "triángulo" Y figura <> "triangulo" Y figura <> "trapecio" 
+            Entonces
+
+            Escribir "No tenemos disponible esta figura para poder hallar 
+                su área, lo sentimos.";
+            area<-0;
+        SiNo
+            Escribir "Para hallar el área de un ", figura, " por favor 
+                digite la base o el ancho de este: ";
+            Leer base;
+            Escribir "Támbien digite su altura, o el largo del del ", 
+                figura, ": ";
+            Leer altura;
+        FinSi
+        
+        Si figura = "rectángulo" O figura = "rectangulo" Entonces
+            area<-base*altura;
+        FinSi
+        Si figura = "triángulo" O figura = "triangulo" Entonces
+            area<-(base*altura)/2;
+        FinSi
+        Si figura = "trapecio" Entonces
+            Escribir "Digite el otro lado o base de su trapecio: ";
+            Leer baseLado;
+            area<-((base+baseLado)*altura)/2;
+        FinSi
+    FinSubProceso                      
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>

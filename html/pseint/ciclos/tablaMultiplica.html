@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código tabla de multiplicar</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintCiclos.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerCiclos4
+    
+        Definir i, num, result Como Entero;
+            
+        Escribir "Digite el numero que desea multiplicar: ";
+        Leer  num;
+        
+        Para i<-1 Hasta 10 Con Paso 1 Hacer
+            result<-i*num;
+            Escribir i, " x ", num, " = ", result;
+        FinPara
+        
+     FinProceso
+                        
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código lista simple</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintArreglos.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <a class="linkProyectos" href="../pseintFunciones.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Volver a ejercicios de funciones
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerArreglos1
+        Definir vector, posicion, num, j Como Entero;
+        
+        posicion<-0;
+        
+        Dimension vector[5];
+        inicializar(vector);
+        
+        Mientras posicion < 5 Hacer
+            Escribir "Posicion numero: ", posicion;
+            Escribir "Ingrese un numero del 1 al 100: ";
+            Leer num;
+            
+            Si num > 0 y num <= 100 Entonces
+                vector[posicion] <- num;
+            SiNo
+                Escribir "El numero debe estar entre 1 y 100.";
+                posicion<-posicion-1;
+            FinSi
+            posicion <- posicion+1;
+        FinMientras
+        
+        Limpiar Pantalla;
+        
+        Si posicion = 5 Entonces
+            Escribir "Lista de numeros: ";
+            Para j<-0 Hasta 4 Hacer
+                Escribir "[", j, "] = ", vector[j];
+            FinPara
+        FinSi
+        
+    FinProceso
+    
+    SubProceso inicializar(vector)
+        Definir i Como Entero;
+        
+        Para i<-0 Hasta 4 Hacer
+            vector[i] <- 0;
+        FinPara
+    FinSubProceso
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código en funciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerFuncionesArreglos1
+    
+        Definir vector, posicion, filas Como Entero;
+        
+        filas<-5;
+        posicion<-0;
+        
+        Dimension vector[5];
+        inicializar(vector, filas);
+        
+        posicion<-ingresarNumero(vector, filas);
+        
+        Limpiar Pantalla;
+        
+        mostrarNumeros(vector, posicion, filas);
+        
+    FinProceso
+    
+    SubProceso inicializar(vector, filas)
+        Definir i Como Entero;
+        
+        Para i<-0 Hasta filas-1 Hacer
+            vector[i] <- 0;
+        FinPara
+    FinSubProceso
+    
+    SubProceso posicion<-ingresarNumero(vector, filas)
+        Definir posicion, num Como Entero;
+        
+        posicion<-0;
+        
+        Mientras posicion < filas Hacer
+            Escribir "Posicion numero: ", posicion;
+            Escribir "Ingrese un numero del 1 al 100: ";
+            Leer num;
+            
+            Si num > 0 y num <= 100 Entonces
+                vector[posicion] <- num;
+            SiNo
+                Escribir "El numero debe estar entre 1 y 100.";
+                posicion<-posicion-1;
+            FinSi
+            posicion <- posicion+1;
+        FinMientras
+    FinSubProceso
+    
+    SubProceso mostrarNumeros(vector, posicion, filas)
+        Definir j Como Entero;
+        
+        Si posicion = filas Entonces
+            Escribir "Lista de numeros: ";
+            Para j<-0 Hasta filas-1 Hacer
+                Escribir "[", j, "] = ", vector[j];
+            FinPara
+        FinSi
+    FinSubProceso
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>

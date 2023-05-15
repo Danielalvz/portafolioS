@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="caja">
+            <select id="selectorColores" class="colores">
+                <option disabled>Seleccione un color</option>
+                <option class="caja" value="1">Verde</option>
+                <option class="naranja" value="2">Naranja</option>
+                <option class="azul" value="3">Azul</option>
+                <option class="morado" value="4">Morado</option>
+            </select>
+            <h1>
+                <img id="foto" src="imagenes/foto.jpg" alt="Foto hoja de vida">
+            </h1>
+
+            <p id="perfil"><em><strong>Daniela Lozano Vásquez</strong></em></p>
+
+            <nav>
+                <ul id="menu">
+                    <li><a class="itemsMenu" href="index.html">Perfíl</a></li>
+                    <li><a class="itemsMenu" href="experiencia.html">Experiencia</a></li>
+                    <li><a class="itemsMenu" href="referenciasPersonales.html">Referencias Personales</a></li>
+                    <li><a class="itemsMenu" href="referenciasFamiliares.html">Referencias Familiares</a></li>
+                    <li><a class="itemsMenu" href="estudios.html">Estudios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <p><strong> Referencias Personales</strong></p>
+            <hr>
+            <div class="descripcion" id="descripcion">
+                <button class="acordeon" type="button">
+                    <h4>Referencia Profesional</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                <div class="panel">
+                    <p>Mónica Beltrán Solano <br>
+                        Contadora, Agropecuaria la Granjita.
+                    </p>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Referencia Profesional</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                <div class="panel">
+                    <p>Francisco Vásquez Delgado <br>
+                        Administrador de empresas.
+                    </p>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Referencia Profesional</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                <div class="panel">
+                    <p>Luis Fernando Ramírez <br>
+                        Mercadeo y ventas, Hacienda el Escobal.
+                    </p>
+                </div>
+
+                <p>Mayor información de referencias a solicitud del interesado.</p>
+            </div>
+            <br>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy Derechos reservados <br> Daniela Lozano Vasquez.</small></p>
+    </footer>
+    <script>funciones()</script>
+</body>
+</html>

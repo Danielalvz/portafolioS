@@ -1,0 +1,199 @@
+header .caja {
+    background-color: rgb(173, 201, 201); 
+    width: 100%;    
+}
+
+h1 {
+    position: relative; 
+    display: inline;
+}
+
+#foto {
+    width: 200px; 
+    margin:15px; 
+    border-radius: 50%; 
+    border-width: 10px; 
+    border-color: aliceblue; 
+    border-style: solid;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#perfil {
+    position: absolute; 
+    top: 15%; 
+    left: 50%; 
+    width: 500px;
+}
+
+nav {
+    display: flex; 
+    justify-content: center; 
+    padding: 20px; 
+    font-weight: bolder;
+}
+
+#menu {
+    display: inline-flex; 
+    margin: 0 15px; 
+    list-style-type: none;
+}
+
+#menu > li > a {
+    padding: 20px; 
+    text-decoration: none; 
+    color: rgb(53, 149, 77);
+}
+#menu > li > a:hover {
+    color: #308c95;
+    text-decoration: underline;
+}
+
+#menu > li > a:active {
+    color: rgb(15, 51, 85);
+}
+
+section > p {
+    text-align: center; 
+    padding-top: 10px;
+}
+
+.descripcion {
+    text-align: justify;
+}
+
+.linkProyectos {
+    padding-left: 15%;
+    padding-top: 20px;
+    color: rgb(14, 97, 28);
+    font-size: 18px;
+    text-transform: capitalize;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;  
+}
+
+#arrowLeft {
+    padding-right: 20px;
+}
+
+a:hover {
+    color: rgb(30, 50, 121);
+}
+
+a:active {
+    color: rgb(58, 64, 73);
+}
+
+#descripcionPerfil {
+    padding-left: 15%; 
+    padding-right: 15%; 
+    padding-top: 20px;
+}
+
+.descargar {
+    padding-left: 15%; 
+    padding-top: 10px;
+}
+
+#btnDescargar {
+    background-color:rgb(53, 149, 77); 
+    padding: 10px; 
+    width: 20%;
+}
+
+#btnDescargar:hover {
+    background-color:  rgb(72, 250, 122);
+    cursor: pointer;
+}
+
+#btnDescargar:active {
+    background-color:  rgb(72, 164, 250);
+}
+
+#btnDescargar > a {
+    color: aliceblue; 
+    font-weight: bolder; 
+    text-decoration: none;
+}
+
+h4 {
+    padding-left: 10%; 
+    padding-top: 10px;
+}
+
+h5 {
+    padding-left: 10%; 
+    color: rgb(53, 149, 77);
+}
+
+.descripcion ul {
+    padding-left: 15%; 
+    padding-right: 15%; 
+    list-style-type: circle; 
+}
+
+.descripcion p {
+    padding-left: 15%; 
+    padding-right: 15%;
+}
+
+#cursosCompementarios {
+    padding-left: 10%; 
+    text-align: center; 
+    padding-top: 10px;
+}
+
+.referencias {
+    padding-left: 15%; 
+    padding-top: 10px;
+}
+
+#listaReferencias {
+    padding-left: 15%; 
+    padding-right: 15%; 
+    list-style-type: square;
+}
+
+/* Footer */
+footer {
+    background: url(imagenes/bg.jpg); 
+    text-align: center; 
+    position: relative; 
+    width: 100%; 
+    padding-top: 20px; 
+    bottom: 0;
+}
+
+footer > p {
+    padding-bottom: 25px; 
+    color: aliceblue;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:480px) {
+    body {
+      font-size: 14px;
+    }
+
+    #foto {
+        width: 35%; 
+    }
+    #perfil {
+        position: absolute; 
+        top: 13%; 
+    }
+    
+    #menu {
+        display: inline-block; 
+        text-align: left;
+    }
+
+    #btnDescargar {
+        width: 100px;
+    }
+
+    h4 {
+        padding-right: 20px;
+    }
+  }

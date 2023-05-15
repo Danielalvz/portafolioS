@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código edades</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintCondicionales.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <a class="linkProyectos" href="../pseintFunciones.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Volver a ejercicios de funciones
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerCondicionales1y2
+
+        Definir edad Como Entero;
+                            
+        Escribir "Ingrese su edad";
+        Leer edad;
+                            
+        Si (edad >= 18) Entonces
+            Escribir "Usted es mayor de edad";
+        SiNo
+            Escribir "Usted aún es un niño(a).";
+        FinSi
+                            
+        Escribir  "Usted tiene ", edad, " años.";
+                            
+    FinProceso
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código en funciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+        Proceso tallerFuncionesCondicionales1y2
+            indicadorAdultez();
+        FinProceso
+        
+        SubProceso indicadorAdultez()
+            Definir edad Como Entero;
+            
+            Escribir "Ingrese su edad";
+            Leer edad;
+            
+            Si (edad >= 18) Entonces
+                Escribir "Usted es mayor de edad";
+            SiNo
+                Escribir "Usted aún es un niño(a).";
+            FinSi
+            
+            Escribir  "Usted tiene ", edad, " años.";
+        FinSubProceso
+                        </pre>
+                    </div>
+                </div>
+                
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+
+</html>

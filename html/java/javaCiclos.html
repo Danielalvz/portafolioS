@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Java</title>
+    <link rel="stylesheet" href="../../css/estiloPortafolio.css">
+    <script src="../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../imagenes/bot.gif" alt="Imagend e una computadora animada">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../index.html">Home</a>
+                <a class="linkNav" href="../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ejercicio de ciclos</h2>
+            <a class="linkProyectos" href="./java.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Java
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Escalera descendente</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>1. Realizar la siguiente figura por medio del ciclo Para</p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    public class Ciclo1Escalera {
+        public static void main(String[] args) {
+            int cantidad;
+            String simbolo;
+    
+            simbolo = "*";
+            cantidad = 10;
+    
+            for (int i=1; i <= cantidad; i++) {
+                for (int j=1; j <= i; j++) {
+                    System.out.print(simbolo);
+                }
+                System.out.println();
+            }
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Escalera ascendente</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo2EscaleraAscendente {
+        public static void main(String[] args) {
+            int filas, j = 0, i, h;
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.println("Ingrese el numero de filas que desea: ");
+            filas = sc.nextInt();
+            System.out.println();
+    
+            while (j < filas) {
+                i = 0;
+                while (i < (filas-j)) {
+                    System.out.print(" ");
+                    i++;
+                }
+                h = 0;
+                while (h < j) {
+                    System.out.print("*");
+                    h++;
+                }
+                System.out.println();
+                j++;
+            }
+        }
+    }
+                    </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Árbol de navidad</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo3Arbol {
+        public static void main(String[] args) {
+            int j = 0, filas, h, i, k = 0, l, m;
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.print("Ingrese cuantas filas desea: ");
+            filas = sc.nextInt();
+            System.out.println();
+    
+            //Arbol
+            do {
+                i = 0;
+                do {
+                    System.out.print(" ");
+                    i++;
+                } while (i <= filas - j);
+    
+                h = 0;
+                do {
+                    System.out.print("* ");
+                    h++;
+                } while (h <= j);
+    
+                System.out.println();
+                j++;
+            } while (j <= filas);
+    
+            //Palito
+            if (filas == 10) {
+                System.out.println("          ***");
+            }
+    
+            do {
+                l = 0;
+                do {
+                    System.out.print(" ");
+                    l++;
+                } while (l <= (filas - k) - 1);
+    
+                m = 0;
+                do {
+                    System.out.print("**");
+                    m++;
+                } while (m <= k);
+    
+                System.out.print("*");
+                System.out.println();
+                k++;
+            } while (k < 3);
+        }
+    }                            
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Tabla de multiplicar</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        4. Se requiere un programa que pueda crear la tabla de multiplicar 
+                        del número que el usuario indique por medio del ciclo Para; esta 
+                        debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que 
+                        desea crear la tabla del 5, entonces el resultado debería ser el 
+                        siguiente:
+                    </p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo4Multiplica {
+        public static void main(String[] args) {
+            int num, result;
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.println("Digite el numero que desea multiplicar: ");
+            num = sc.nextInt();
+    
+            for (int i=1; i <= 10; i++) {
+                result = i * num;
+                System.out.println(i+ " x "+ num+ " = "+ result);
+            }
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Menu de opciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        5. Utilizando el ciclo que usted desee, crear un menú de ejecución 
+                        infinita hasta que el usuario desee terminar dicho ciclo.
+                    </p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo5Menu {
+        public static void main(String[] args) {
+            int opcion = 0;
+            boolean bandera, nombreCapturado;
+            String nombre = null;
+    
+            bandera = true;
+            nombreCapturado = false;
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.println("Bienvenido al Menu de usuario.");
+            do {
+                System.out.println("Digite la opción que desea realizar: ");
+                System.out.println("1. Captura nombre");
+                System.out.println("2. Saludar persona");
+                System.out.println("3 Salir del sistema");
+                opcion = sc.nextInt();
+    
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Cual es su nombre? ");
+                        nombre = sc.next();
+                        nombreCapturado = true;
+                        break;
+                    case 2:
+                        if (nombreCapturado) {
+                            System.out.println("Hola "+ nombre);
+                        } else {
+                            System.out.println("Hola, aun no sabemos tu 
+                                nombre, eres bienvenido, y estas invitado 
+                                a  escribir tu nombre con la opción 1.");
+                        }
+                        break;
+                    case 3:
+                        System.out.println("Estas saliendo del programa.");
+                        bandera = false;
+                        break;
+                    default:
+                        System.out.println("Esta opción no esta disponible");
+                        break;
+                }
+            } while (bandera);
+            sc.close();
+        }
+    }
+                    </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Contactos telefónicos</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        6. Se está creando una aplicación que va a estar conectada con un 
+                        prototipo que permita almacenar contactos telefónicos en el 
+                        dispositivo. Para ello cada contacto debe contener nombre completo, 
+                        teléfono y organización. Se requiere que la aplicación permita 
+                        añadir 3 contactos verificando que el número no esté almacenado, 
+                        buscar contactos almacenados y eliminar contactos si el usuario lo 
+                        requiere. Recuerde que el sistema debe terminar cuando el usuario 
+                        así lo indique.
+                    </p>
+
+                    <div class="codigo">
+                        <pre>
+  package ciclos;
+
+  import java.util.Scanner;
+
+  public class Ciclo6Contactos {
+    public static void main(String[] args) {
+        String persona, telefono, organizacion, busqueda, confirmacion;
+        int opcion = 0, columna, contador = 0;
+
+        Scanner sc = new Scanner(System.in);
+
+        String[][] contactos = new String[3][3];
+
+        for (int i = 0; i < contactos.length; i++) {
+            for (int j = 0; j < contactos[i].length; j++) {
+                contactos[i][j] = "";
+            }
+        }
+
+        while (opcion != 5) {
+            System.out.println("-------------------");
+            System.out.println("1. Añadir contacto");
+            System.out.println("2. Buscar contacto");
+            System.out.println("3. Listar contactos");
+            System.out.println("4. Eliminar contacto");
+            System.out.println("5. Salir");
+            System.out.println("-------------------");
+            System.out.println("Seleccione una opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    for (int fila = 0; fila < contactos.length; fila++) {
+                        System.out.println("Contacto numero "+ 
+                            (fila+1));
+                        columna = 0;
+                        for (int k = 0; k < 1; k++) {
+                            System.out.println("Ingrese el nombre de su 
+                                contacto");
+                            persona = sc.next();
+                            contactos[fila][columna] = persona;
+
+                            System.out.println("Ingrese el telefono de 
+                                su contacto: ");
+                            telefono = sc.next();
+                            contactos[fila][columna + 1] = telefono;
+
+                            for (int l=0; l < contactos.length; l++) {
+                                if (l != fila) {
+                                    while (contactos[l][columna+1]
+                                        .equals(telefono)) {
+
+                                        System.out.println("El teléfono 
+                                            ingresado ya está en la lista
+                                                de contactos.");
+                                        System.out.println("Ingrese el 
+                                            telefono de su contacto de 
+                                            nuevo: ");
+                                        telefono = sc.next();
+                                        contactos[fila][columna+1] = 
+                                            telefono;
+                                    }
+                                }
+                            }
+
+                            System.out.println("Ingrese la organizacion 
+                                de su contacto: ");
+                            organizacion = sc.next();
+                            contactos[fila][columna+2] = organizacion;
+                        }
+                    }
+                    break;
+                case 2:
+                    System.out.println("Buscar contacto");
+                    System.out.println("Escriba el nombre o telefono 
+                        que desea buscar: ");
+                    busqueda = sc.next();
+
+                    for (int fila  = 0; fila < contactos.length; fila++) {
+                        if (contactos[fila][0].equals(busqueda) || 
+                            contactos[fila][1].equals(busqueda)) {
+
+                            System.out.println("Contacto encontrado:");
+                            System.out.println("Nombre: " + 
+                                contactos[fila][0]);
+                            System.out.println("Teléfono: " + 
+                                contactos[fila][1]);
+                            System.out.println("Organización: " + 
+                                contactos[fila][2]);
+                            fila = contactos.length;
+                            contador += 1;
+                        } else {
+                            contador = 0;
+                        }
+                    }
+                    if (contador < 1) {
+                        System.out.println("No se encontró ningún 
+                            contacto con ese nombre o teléfono.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Lista de contactos ");
+                    for (int m = 0; m < contactos.length; m++) {
+                        System.out.println("Contacto numero "+ (m+1));
+                        for (int n = 0; n < contactos[m].length; n++) {
+                            System.out.println(contactos[m][n]);
+                        }
+                    }
+                    break;
+                case 4:
+                    System.out.println("Eliminar contacto");
+                    System.out.println("Escriba el contacto que desea 
+                        elminar ");
+                    busqueda = sc.next();
+
+                    for (int fila = 0; fila < contactos.length; fila++) {
+                        if (contactos[fila][0].equals(busqueda) || 
+                            contactos[fila][1].equals(busqueda)) {
+
+                            System.out.println("Contacto encontrado:");
+                            System.out.println("Nombre: " + 
+                                contactos[fila][0]);
+                            System.out.println("Teléfono: " + 
+                                contactos[fila][1]);
+                            System.out.println("Organización: " + 
+                                contactos[fila][2]);
+
+                            confirmacion = "";
+                            while (!confirmacion.equals("S") && 
+                                !confirmacion.equals("N")) {
+
+                                System.out.println("¿Está seguro que 
+                                    desea eliminar este contacto? (S/N)");
+                                confirmacion = sc.next().toUpperCase();
+                            }
+
+                            if (confirmacion.equals("S")) {
+                                for (int i = 0; i < 
+                                    contactos[fila].length; i++) {
+
+                                    contactos[fila][i] = "";
+                                }
+                                System.out.println("Contacto eliminado.");
+                            } else {
+                                System.out.println("Eliminación de 
+                                    contacto cancelada.");
+                            }
+                            fila = contactos.length;
+                            contador += 1;
+                        } else {
+                            contador = 0;
+                        }
+                    }
+                    if (contador < 1) {
+                        System.out.println("No se encontró ningún 
+                            contacto con ese nombre o teléfono.");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Esta saliendo del sistema..");
+                    break;
+                default:
+                    System.out.println("Esta opción no esta disponible");
+            }
+          }
+      }
+  }                            
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Registro parqueadero</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        7. El parqueadero "El guardián" presta sus servicios de 
+                        parqueadero nocturno para los usuarios del barrio y requiere 
+                        una aplicación que permita registrar los vehículos que se 
+                        cuidan en estas instalaciones. Se sugiere que el parqueadero 
+                        tenga los atributos del vehículo como son, placa y marca, y 
+                        los datos del cliente como son nombre completo y número de 
+                        teléfono. Para cada vehículo se debe permitir la opción de 
+                        ingresar al parqueadero, retirar del parqueadero y consultar 
+                        si un vehículo se encuentra en el parqueadero. Recuerde que 
+                        el sistema debe terminar cuando el usuario así lo indique. 
+                        Tenga en presente que el parqueadero solo puede almacenar 
+                        máximo 5 vehículos.
+                    </p>
+
+                    <div class="codigo">
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo7Parqueadero {
+        public static void main(String[] args) {
+            String placa;
+            int opcion = 0, a = 0, k, j;
+            boolean encontrado, bandera;
+    
+            Scanner sc = new Scanner(System.in);
+    
+            String[][] vehiculos = new String[5][4];
+    
+            for (int i = 0; i < vehiculos.length; i++) {
+                for (int f = 0; f < vehiculos[i].length; f++) {
+                    vehiculos[i][f] = "0";
+                }
+            }
+    
+    
+            while (opcion != 5) {
+                System.out.println("Bienvenido al parqueadero 
+                    El guardián");
+                System.out.println("Digite la opción que desee 
+                    realizar:");
+                System.out.println("1 para ingresar un vehiculo");
+                System.out.println("2 para retirar vehiculo del 
+                    parqueadero");
+                System.out.println("3 para consultar vehiculo");
+                System.out.println("4 muestra todos los vehiculos");
+                System.out.println("5 para salir del sistema");
+                opcion = sc.nextInt();
+    
+                switch (opcion) {
+                    case 1:
+                        System.out.println(a);
+                        if (a < vehiculos.length || a > 
+                            vehiculos.length) {
+
+                            if (vehiculos[a][0].equals("0")) {
+                                guardarCliente(vehiculos, a);
+                            }
+                            a += 1;
+                        }
+    
+                        if (a > vehiculos.length) {
+                            System.out.println("Lo siento, el 
+                                parqueadero está lleno");
+                        }
+                        break;
+                    case 2:
+                        System.out.println("Ingrese la placa del 
+                            vehículo que desea retirar: ");
+                        placa = sc.next();
+                        encontrado = true;
+                        j = 0;
+    
+                        while (encontrado && j < vehiculos.length) {
+                            if (vehiculos[j][0].equals(placa)) {
+                                for (int h = 0; h < vehiculos[j].length; 
+                                    h++) {
+                                    vehiculos[j][h] = "0";
+                                }
+                                System.out.println("Vehículo retirado 
+                                    correctamente");
+                                encontrado = false;
+                            } else if (j >= vehiculos[j].length) {
+                                System.out.println("Lo siento, el 
+                                    vehículo no se encuentra en el 
+                                    parqueadero");
+                            }
+                            j += 1;
+                        }
+    
+                        if (a == 0)  {
+                            a = 0;
+                        } else {
+                            a -= 1;
+                        }
+                        break;
+                    case 3:
+                        System.out.println("Ingrese la placa del 
+                            vehículo que desea consultar: ");
+                        placa = sc.next();
+    
+                        bandera = true;
+                        k = 0;
+                        while (bandera && k < vehiculos.length) {
+                            if (vehiculos[k][0].equals(placa)) {
+                                System.out.println("El vehículo se 
+                                    encuentra en el parqueadero");
+                                System.out.println("Placa: " + 
+                                    vehiculos[k][0]);
+                                System.out.println("Marca: " + 
+                                    vehiculos[k][1]);
+                                System.out.println("Nombre: " + 
+                                    vehiculos[k][2]);
+                                System.out.println("Telefono: " + 
+                                    vehiculos[k][3]);
+                                bandera = false;
+                            } else if (k >= vehiculos[k].length) {
+                                System.out.println("Lo siento, el 
+                                    vehículo no se encuentra en el 
+                                    parqueadero");
+                            }
+                            k += 1;
+                        }
+                        break;
+                    case 4:
+                        System.out.println("Todos los vehiculos:");
+                        for (int m = 0; m < vehiculos[a].length; m++) {
+                            System.out.println("Vehiculo en posicion 
+                                no. "+ m);
+                            System.out.println("Placa: " + 
+                                vehiculos[m][0]);
+                            System.out.println("Marca: " + 
+                                vehiculos[m][1]);
+                            System.out.println("Nombre: " + 
+                                vehiculos[m][2]);
+                            System.out.println("Telefono: " + 
+                                vehiculos[m][3]);
+                        }
+                        break;
+                    case 5:
+                        System.out.println("¡Gracias por utilizar el 
+                            Parqueadero El guardián!");
+                        break;
+                    default:
+                        System.out.println("Opción inválida, por favor 
+                            seleccione otra opción");
+                }
+            }
+        }
+    
+        public static void guardarCliente(String[][] vehiculos, int a) {
+            String placa, marca, nombre, telefono;
+            boolean bandera = true;
+    
+            Scanner sc = new Scanner(System.in);
+    
+            System.out.println("Ingrese la placa del vehículo: ");
+            placa = sc.next();
+            vehiculos[a][0] = placa;
+    
+            System.out.println("Ingrese la marca del vehículo: ");
+            marca = sc.next();
+            vehiculos[a][1] = marca;
+    
+            System.out.println("Ingrese el nombre completo del 
+                cliente: ");
+            nombre = sc.next();
+            vehiculos[a][2] = nombre;
+    
+            while (bandera) {
+                System.out.println("Ingrese el número de teléfono del 
+                    cliente: ");
+                telefono = sc.next();
+                if (telefono.length() == 10) {
+                    vehiculos[a][3] = telefono;
+                    bandera = false;
+                } else {
+                    System.out.println("Numero no valido. El numero 
+                        debe ser de 10 digitos.");
+                }
+            }
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Plataforma curso, registro y notas</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        8. La escuela automovilística "El Maestro" requiere una 
+                        aplicación que permita registrar a sus clientes en los 
+                        cursos de enseñanza automovilística y establecer quienes 
+                        lo han aprobado para continuar con el trámite de adquirir 
+                        la licencia de conducción. Para cada usuario se debe 
+                        permitir registrar su ingreso al curso, consultar usuarios 
+                        que hayan presentado el curso y resultados de la prueba 
+                        del curso (si fueron aprobados o no). Recuerde que el 
+                        sistema debe terminar cuando el usuario así lo indique. 
+                        Tenga presente que la escuela tiene capacidad máxima de 
+                        gestionar 8 usuarios en su totalidad.
+                    </p>
+
+                    <div class="codigo">
+
+                        <a class="linkCodigo" target="_blank" href="https://github.com/Danielalvz/tallerJava/blob/main/3%20tallerCiclos/src/main/java/ciclos/UsuariosCursoAutos.java">
+                            Enlace a la clase UsuariosCursoAutos.
+                        </a>
+
+                        <pre>
+    package ciclos;
+
+    import java.util.Scanner;
+    
+    public class Ciclo8CursoAutos {
+        public static void main(String[] args) {
+            String nombre, identificacion;
+            int opcion = 0, a = 0, k, j;
+            double resultado;
+            boolean bandera, encontrado;
+    
+            Scanner sc = new Scanner(System.in);
+    
+            UsuariosCursoAutos[] usuarios = new UsuariosCursoAutos[8];
+            for (int i = 0; i < usuarios.length; i++) {
+                usuarios[i] = new UsuariosCursoAutos("0", "0", 0);
+            }
+    
+            System.out.println("Bienvenido a la escuela automovilística 
+                El Maestro!");
+            System.out.println("Con nuestros cursos, logrará conseguir su 
+                licencia de conducción.");
+            while (opcion != 5) {
+                System.out.println("Ingrese la opción que desee: ");
+                System.out.println("1 para registrar un usuario en el 
+                    curso");
+                System.out.println("2 para consultar un usuario");
+                System.out.println("3 para consulta de resultados");
+                System.out.println("4 para listar todos los usuarios");
+                System.out.println("5 para salir del sistema");
+                opcion = sc.nextInt();
+    
+                switch (opcion) {
+                    case 1: //Registrar usuario
+                        System.out.println("Tenemos capacidad para 8 
+                            estudiantes.");
+                        System.out.println("Estamos con el registro del 
+                            estudiante no.: "+ (a+1));
+                        bandera = true;
+                        if (a < usuarios.length) {
+                            if (usuarios[a].getNombre().equals("0")) {
+                                //Guardar usuario---------------------
+                                System.out.println("Ingrese el nombre de 
+                                    usuario: ");
+                                nombre = sc.next();
+                                usuarios[a].setNombre(nombre);
+    
+                                System.out.println("Ingrese numero de 
+                                    identificacion: ");
+                                identificacion = sc.next();
+                                usuarios[a].
+                                    setIdentificacion(identificacion);
+    
+                                while (bandera) {
+                                    System.out.println("Ingrese el resultado 
+                                        obtenido ");
+                                    System.out.println("Si se encuentra en 
+                                        curso, digite 0 ");
+                                    resultado = sc.nextDouble();
+    
+                                    if (resultado <= 100) {
+                                        usuarios[a].
+                                            setCalificacion(resultado);
+                                        bandera = false;
+                                    } else {
+                                        System.out.println("La calificación 
+                                            es de 1 a 100, y 0 cuando esta 
+                                            cursando, es decir, aun no hay 
+                                            calificación.");
+                                    }
+                                }//------------------------------------
+                            }
+                            a += 1;
+                        }
+    
+                        if (a > usuarios.length-1) {
+                            System.out.println("Lo siento, no tenemos mas 
+                                cupos");
+                        }
+                        break;
+                    case 2: //Consultar un usuario
+                        System.out.println("Ingrese el numero de 
+                            identificacion del usuario que desea 
+                                consultar: ");
+                        identificacion = sc.next();
+                        //Consultar usuario----
+                        encontrado = true;
+                        k = 0;
+    
+                        while (encontrado && k < usuarios.length) {
+                            if (usuarios[k].getIdentificacion().
+                                equals(identificacion)) {
+
+                                System.out.println("Usuario matriculado");
+                                System.out.println("Nombre: " + 
+                                    usuarios[k].getNombre());
+                                System.out.println("Identificacion: " + 
+                                    usuarios[k].getIdentificacion());
+                                encontrado = false;
+                            } else if (k >= usuarios.length-1) {
+                                System.out.println("Lo siento, el usuario 
+                                    no se encuentra registrado.");
+                            }
+                            k += 1;
+                        } //------------------
+                        break;
+                    case 3: //Consultar resultados
+                        System.out.println("Ingrese el numero de 
+                            identificacion del usuario que desea consultar 
+                            para conocer su resultado: ");
+                        identificacion = sc.next();
+    
+                        //Consultar notas-----------------------
+                        encontrado = true;
+                        j = 0;
+    
+                        while (encontrado && j < usuarios.length) {
+                            if (usuarios[j].getIdentificacion().
+                                equals(identificacion)) {
+
+                                System.out.println("Usuario matriculado");
+                                System.out.println("Nombre: " + 
+                                    usuarios[j].getNombre());
+                                System.out.println("Identificacion: " + 
+                                    usuarios[j].getIdentificacion());
+                                System.out.println("Resultado: " + 
+                                    usuarios[j].getCalificacion());
+                                encontrado = false;
+    
+                                if (usuarios[j].getCalificacion() == 0) {
+                                    System.out.println("El usuario se 
+                                        encuentra en progreso, aun no 
+                                        cuenta con calificación final.");
+                                    System.out.println("Resultado: 
+                                        EN PROGRESO");
+                                }
+                                if (usuarios[j].getCalificacion() > 0 && 
+                                    usuarios[j].getCalificacion() < 80) {
+
+                                    System.out.println("Lo lamentamos, debes 
+                                        repetir el curso, ya que no se 
+                                        alcanzó el resultado esperado.");
+                                    System.out.println("Resultado: NO 
+                                        APROBADO");
+                                }
+                                if (usuarios[j].getCalificacion() >= 80) {
+                                    System.out.println("Felicitaciones! 
+                                        terminó el curso y APROBÓ.");
+                                    System.out.println("Resultado: 
+                                        APROBADO");
+                                }
+                            }
+                            j += 1;
+                        } //----------------------------------
+                        break;
+                    case 4: //Listar todos los usuarios
+                        System.out.println("Lista de los usuarios 
+                            registrados");
+    
+                        //Listar usuarios-------------------
+                        for (int m = 0; m < usuarios.length; m++) {
+                            System.out.println("Usuario no. " + (m+1));
+                            System.out.println("Nombre: " + 
+                                usuarios[m].getNombre());
+                            System.out.println("Identificación: " + 
+                                usuarios[m].getIdentificacion());
+                        }//------------------------------
+                        break;
+                    case 5: //Salir del sistema
+                        System.out.println("Gracias por preferirnos!");
+                        System.out.println("Esta saliendo del programa...");
+                        break;
+                }
+            }
+        }
+    }                            
+                        </pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script>desplegar()</script>
+</body>
+
+</html>

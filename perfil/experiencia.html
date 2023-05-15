@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="caja">
+            <select id="selectorColores" class="colores">
+                <option disabled>Seleccione un color</option>
+                <option class="caja" value="1">Verde</option>
+                <option class="naranja" value="2">Naranja</option>
+                <option class="azul" value="3">Azul</option>
+                <option class="morado" value="4">Morado</option>
+            </select>
+            <h1>
+                <img id="foto" src="imagenes/foto.jpg" alt="Foto hoja de vida">
+            </h1>
+
+            <p id="perfil"><em><strong>Daniela Lozano Vásquez</strong></em></p>
+
+            <nav>
+                <ul id="menu">
+                    <li><a class="itemsMenu" href="index.html">Perfíl</a></li>
+                    <li><a class="itemsMenu" href="experiencia.html">Experiencia</a></li>
+                    <li><a class="itemsMenu" href="referenciasPersonales.html">Referencias Personales</a></li>
+                    <li><a class="itemsMenu" href="referenciasFamiliares.html">Referencias Familiares</a></li>
+                    <li><a class="itemsMenu" href="estudios.html">Estudios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <p><strong> Experiencia laboral</strong></p>
+            <hr>
+            <div class="descripcion" id="descripcion">
+                <button class="acordeon" type="button">
+                    <h4>Estudio independiente de Automatización de pruebas.</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>OCT 2022 - ACTUAL </h5>
+                    <ul>
+                        <li>Diseño y creación de casos de prueba</li>
+                        <li>Mapeo de paginas web como pracitca, usando Java, Cucumber, Selenium, Serenity BDD con el
+                            patron
+                            de diseño Screenplay y con otro patron como lo es POM.</li>
+                        <li>Uso de Jmeter para pruebas de rendimiento, carga y estrés.</li>
+                        <li>Toma y captura de evidencias mediante herramientas para la ejecución de plan de pruebas</li>
+                    </ul>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Aprendizaje y práctica autónoma de Desarrollo de Aplicaciones Web.</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>MAY 2022 - NOV 2022</h5>
+                    <ul>
+                        <li>Creación de proyectos de práctica autónoma, como juegos sencillos, tipo juego ahorcado,
+                            encriptador, usando Javascript, HTML y CSS </li>
+                        <li>Realización en equipo de modelos de páginas básicas, como pagina de inventario de ingresos y
+                            egresos, y login, con base de datos relacional MySQL, usando Java y aplicativo de
+                            agendamiento de citas con modelo de base de datos no relacional MongoDB, utilizando Java,
+                            React y Nodejs.</li>
+                    </ul>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Asesora Backoffice </h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>UNO 27 | ENE - ABR 2022</h5>
+                    <ul>
+                        <li>Gestionar los requerimientos de los clientes internos y externos, vía telefónica de manera
+                            oportuna y eficiente.</li>
+                        <li>Digitación de ventas, datos y agendamiento.</li>
+                        <li>Manejo de aplicativos, plataformas de digitación y validación de datos</li>
+                    </ul>
+                </div>
+
+
+                <button class="acordeon" type="button">
+                    <h4>Asesora comercial punto de venta</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <h5>BAGUER S.A.S, TIENDA DEREK | TEMPORADA DIC 2021</h5>
+                    <ul>
+                        <li>Atención, asesoramiento y venta al cliente</li>
+                        <li>Trabajo en equipo para brindar excelente servicio de ventas</li>
+                        <li>Organización en tienda y en bodega de productos</li>
+                    </ul>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy Derechos reservados <br> Daniela Lozano Vasquez.</small></p>
+    </footer>
+    <script>funciones()</script>
+</body>
+
+</html>

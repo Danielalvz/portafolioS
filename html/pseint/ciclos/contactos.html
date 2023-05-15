@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pseint</title>
+    <link rel="stylesheet" href="../../../css/estiloPortafolio.css">
+    <script src="../../../js/desplegables.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="contenedor">
+                <img class="imagenMenu" src="../../../imagenes/bot.gif" alt="">
+                <h1> Portafolio</h1>
+            </div>
+            <div class="menu">
+                <a class="linkNav" href="../../../index.html">Home</a>
+                <a class="linkNav" href="../../../perfil/index.html">Perfíl</a>
+                <a class="linkNav" href="../../../portafolio.html">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Código contactos telefónicos</h2>
+            <a class="linkProyectos" href="../pseint.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Proyectos Pseint
+            </a>
+            <a class="linkProyectos" href="../pseintCiclos.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Ejercicio teorico
+            </a>
+
+            <a class="linkProyectos" href="../pseintFunciones.html">
+                <i id="arrowLeft" class="fa-solid fa-arrow-left"></i>
+                Volver a ejercicios de funciones
+            </a>
+
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Código</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerCiclos6
+
+        Definir contactos, persona, telefono, organizacion, busqueda, 
+            confirmacion Como Caracter;
+        Definir opcion, fila, columna, i, j, k Como Entero;
+        Definir encontrado Como Logico;
+        
+        opcion<-0;
+        encontrado <- Falso;
+        
+        Dimension contactos[3,3]; 
+        contactos[0,0] <- ""; 
+        contactos[0,1] <- ""; 
+        contactos[0,2] <- ""; 
+        contactos[1,0] <- ""; 
+        contactos[1,1] <- ""; 
+        contactos[1,2] <- ""; 
+        contactos[2,0] <- ""; 
+        contactos[2,1] <- ""; 
+        contactos[2,2] <- ""; 
+        
+        Mientras opcion <> 5 Hacer
+            Escribir "-------------------";
+            Escribir "1. Añadir contacto";
+            Escribir "2. Buscar contacto";
+            Escribir "3. Listar contactos";
+            Escribir "4. Eliminar contacto";
+            Escribir "5. Salir";
+            Escribir "-------------------";
+            Escribir "Seleccione una opción: ";
+            Leer opcion;
+            
+            Segun opcion Hacer
+                1: 
+                    Para fila<-0 Hasta 2 Con Paso 1 Hacer
+                        Escribir "Contacto numero ", fila+1;
+                        columna<-0;
+                        Para k<-0 Hasta 0 Con Paso 1 Hacer
+                            Escribir "Ingrese el nombre de su contacto";
+                            Leer persona;
+                            contactos[fila, columna] <- persona;
+                            Escribir contactos[fila, columna];
+                            
+                            Escribir "Ingrese el telefono de su 
+                                contacto: ";
+                            Leer telefono;
+                            contactos[fila, columna+1] <- telefono;
+                            Escribir contactos[fila, columna];
+                            Escribir contactos[fila, columna+1];
+                            
+                            Para i <- 0 Hasta 1 Con Paso 1 Hacer
+                                Si i <> fila Entonces
+                                    Si contactos[i, columna+1] = telefono 
+                                        Entonces
+                                        Escribir "El teléfono ingresado 
+                                            ya está en la lista de 
+                                            contactos.";
+                                        Escribir "Ingrese el telefono de 
+                                            su contacto de nuevo: ";
+                                        Leer telefono;
+                                        contactos[fila, columna+1] <- 
+                                            telefono;
+                                    FinSi
+                                FinSi	
+                            FinPara
+                            
+                            
+                            Escribir "Ingrese la organizacion de su 
+                                contacto: ";
+                            Leer organizacion;
+                            contactos[fila, columna+2] <- organizacion;
+                            Escribir contactos[fila, columna];
+                            Escribir contactos[fila, columna+1];
+                            Escribir contactos[fila, columna+2];
+                            
+                        FinPara
+                    FinPara
+                    
+                    Escribir "Lista de contactos ";
+                    Para j<-0 Hasta 2 Con Paso 1 Hacer
+                        Escribir "Contacto numero ", j+1;
+                        Para i<-0 Hasta 2 Con Paso 1 Hacer
+                            Escribir contactos[j,i];
+                        FinPara
+                    FinPara
+                2:
+                    Escribir "Buscar contacto";
+                    Escribir "Escriba el nombre o telefono que desea 
+                        buscar: ";
+                    Leer busqueda;
+                    
+                    Para fila <- 0 Hasta 2 Con Paso 1 Hacer
+                        Si contactos[fila, 0] = busqueda O 
+                            contactos[fila, 1] = busqueda Entonces
+
+                            Escribir "Contacto encontrado:";
+                            Escribir "Nombre: ", contactos[fila, 0];
+                            Escribir "Teléfono: ", contactos[fila, 1];
+                            Escribir "Organización: ", 
+                                contactos[fila, 2];
+                            fila<-2;
+                        SiNo 
+                            Escribir "No se encontró ningún contacto 
+                                con ese nombre o teléfono.";
+                            //fila<-2;
+                        FinSi
+                    FinPara
+                3:
+                    Escribir "Lista de contactos ";
+                    Para j<-0 Hasta 2 Con Paso 1 Hacer
+                        Escribir "Contacto numero ", j+1;
+                        Para i<-0 Hasta 2 Con Paso 1 Hacer
+                            Escribir contactos[j,i];
+                        FinPara
+                    FinPara
+    
+                4:
+                    Escribir "Eliminar contacto";
+                    Escribir "Escriba el contacto que desea elminar ";
+                    Leer busqueda;
+                    
+                    Para fila <- 0 Hasta 2 Con Paso 1 Hacer
+                        Si contactos[fila, 0] = busqueda O 
+                            contactos[fila, 1] = busqueda Entonces
+                            Escribir "Contacto encontrado:";
+                            Escribir "Nombre: ", contactos[fila, 0];
+                            Escribir "Teléfono: ", contactos[fila, 1];
+                            Escribir "Organización: ", 
+                                contactos[fila, 2];
+                            
+                            confirmacion <- "";
+                            Mientras confirmacion <> "S" Y 
+                                confirmacion <> "N" Hacer
+
+                                Escribir "¿Está seguro que desea 
+                                    eliminar este contacto? (S/N)";
+                                Leer confirmacion;
+                                confirmacion<-Mayusculas(confirmacion);
+                            FinMientras
+                            
+                            Si confirmacion = "S" Entonces
+                                Para i <- 0 Hasta 2 Con Paso 1 Hacer
+                                    contactos[fila, i] <- "";
+                                FinPara
+                                Escribir "Contacto eliminado.";
+                            Sino
+                                Escribir "Eliminación de contacto 
+                                    cancelada.";
+                            FinSi
+                            fila<-2;
+                        SiNo 
+                            Escribir "No se encontró ningún contacto 
+                                con ese nombre o teléfono.";
+                        FinSi
+                    FinPara
+            FinSegun
+        FinMientras
+    FinProceso                  
+                        </pre>
+                    </div>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Código en funciones</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <div class="codigo">
+                        <pre>
+    Proceso tallerFuncionesCiclos6
+
+        Definir contactos, busqueda Como Caracter;
+        Definir opcion, fila, columna, i, filasContactos, columnasContactos
+            Como Entero;
+        
+        opcion<-0;
+        fila<-0;
+    
+        Dimension contactos[3,3]; 
+        filasContactos<-3;
+        columnasContactos<-3;
+        inicializarContactos(contactos, filasContactos, columnasContactos);
+        
+        Mientras opcion <> 5 Hacer
+            opcion<-imprimirMenu();
+            
+            Segun opcion Hacer
+                1: 
+                    Si fila < filasContactos Entonces
+                        Escribir "Contacto numero ", fila+1;
+                        columna<-0;
+    
+                        agregarContacto(contactos,fila, columna);
+                        
+                        fila<-fila+1;
+                    FinSi
+                    
+                    Si fila >= filasContactos Entonces
+                        Para i<-0 Hasta filasContactos-1 Hacer
+                            Si contactos[i,0] = "0" O contactos[i,0] = "" 
+                                Entonces
+
+                                agregarContacto(contactos,i,columna);
+                            FinSi
+                        FinPara
+                    FinSi
+                    
+                    Si fila = filasContactos Entonces
+                        Escribir "Lista de contactos llena";
+                    FinSi
+                2:
+                    Escribir "Buscar contacto";
+                    Escribir "Escriba el nombre o telefono que desea 
+                        buscar: ";
+                    Leer busqueda;
+                    
+                    buscarContacto(contactos, busqueda, filasContactos);
+                3:
+                    listarContactos(contactos, filasContactos, 
+                        columnasContactos);
+                4:
+                    Escribir "Eliminar contacto";
+                    Escribir "Escriba el contacto que desea elminar ";
+                    Leer busqueda;
+                    
+                    eliminarContacto(contactos, filasContactos, 
+                        columnasContactos, busqueda);
+                5:
+                    Escribir "Esta saliendo del sistema";
+            FinSegun
+        FinMientras
+    FinProceso
+    
+    SubProceso inicializarContactos(contactos, filas, columnas)
+        Definir i, j Como Entero;
+        
+        Para i<-0 Hasta filas-1 Hacer
+            Para j<-0 Hasta columnas-1 Hacer
+                contactos[i,j] <- "";
+            FinPara
+        FinPara
+    FinSubProceso
+    
+    SubProceso opcion<-imprimirMenu()
+        Definir opcion Como Entero;
+        
+        Escribir "-------------------";
+        Escribir "1. Añadir contacto";
+        Escribir "2. Buscar contacto";
+        Escribir "3. Listar contactos";
+        Escribir "4. Eliminar contacto";
+        Escribir "5. Salir";
+        Escribir "-------------------";
+        Escribir "Seleccione una opción: ";
+        Leer opcion;
+    FinSubProceso
+    
+    SubProceso agregarContacto(contactos,fila,columna)
+        Definir persona, telefono, organizacion Como Caracter;
+        
+        Escribir "Ingrese el nombre de su contacto";
+        Leer persona;
+        contactos[fila, columna] <- persona;
+        
+        Escribir "Ingrese el telefono de su contacto: ";
+        Leer telefono;
+        contactos[fila, columna+1] <- telefono;
+        
+        comprobarNumero(contactos, fila, columna, telefono);
+        
+        Escribir "Ingrese la organizacion de su contacto: ";
+        Leer organizacion;
+        contactos[fila, columna+2] <- organizacion;
+    FinSubProceso
+    
+    SubProceso comprobarNumero(contactos, fila, columna, telefono)
+        Definir i Como Entero;
+        
+        Para i <- 0 Hasta 1 Con Paso 1 Hacer
+            Si i <> fila Entonces
+                Mientras contactos[i, columna+1] = telefono Hacer
+                    Escribir "El teléfono ingresado ya está en la lista 
+                        de contactos.";
+                    Escribir "Ingrese el telefono de su contacto de nuevo: ";
+                    Leer telefono;
+                    contactos[fila, columna+1] <- telefono;
+                FinMientras
+            FinSi	
+        FinPara
+    FinSubProceso
+    
+    SubProceso buscarContacto(contactos, busqueda, filasContactos)
+        Definir fila Como Entero;
+        Definir bandera Como Logico;
+        
+        bandera<-Falso;
+        
+        Para fila <- 0 Hasta filasContactos-1 Con Paso 1 Hacer
+            Si contactos[fila, 0] = busqueda O contactos[fila, 1] = 
+                busqueda Entonces
+
+                Escribir "Contacto encontrado:";
+                Escribir "Nombre: ", contactos[fila, 0];
+                Escribir "Teléfono: ", contactos[fila, 1];
+                Escribir "Organización: ", contactos[fila, 2];
+                bandera<-Verdadero;
+                fila<-2;
+            FinSi
+        FinPara
+        
+        Si fila >= filasContactos-1 Y bandera = Falso Entonces
+            Escribir "No se encontró ningún contacto con ese nombre o 
+                teléfono.";
+        FinSi
+    FinSubProceso
+    
+    SubProceso listarContactos(contactos, filasContactos, columnasContactos)
+        Definir i, j Como Entero;
+        
+        Escribir "Lista de contactos ";
+        Para j<-0 Hasta filasContactos-1 Con Paso 1 Hacer
+            Escribir "Contacto numero ", j+1;
+            Para i<-0 Hasta columnasContactos-1 Con Paso 1 Hacer
+                Escribir contactos[j,i];
+            FinPara
+        FinPara	
+    FinSubProceso
+    
+    SubProceso eliminarContacto(contactos, filasContactos, 
+        columnasContactos, busqueda)
+
+        Definir m, i Como Entero;
+        Definir bandera Como Logico;
+        Definir confirmacion Como Caracter;
+        
+        bandera<-Falso;
+        
+        Para m <- 0 Hasta filasContactos-1 Con Paso 1 Hacer
+            Si contactos[m, 0] = busqueda O contactos[m, 1] = busqueda 
+                Entonces
+
+                Escribir "Contacto encontrado:";
+                Escribir "Nombre: ", contactos[m, 0];
+                Escribir "Teléfono: ", contactos[m, 1];
+                Escribir "Organización: ", contactos[m, 2];
+                bandera<-Verdadero;
+                
+                confirmacion <- "";
+                Mientras confirmacion <> "S" Y confirmacion <> "N" Hacer
+                    Escribir "¿Está seguro que desea eliminar este 
+                        contacto? (S/N)";
+                    Leer confirmacion;
+                    confirmacion<-Mayusculas(confirmacion);
+                FinMientras
+                
+                Si confirmacion = "S" Entonces
+                    Para i <- 0 Hasta columnasContactos-1 Con Paso 1 Hacer
+                        contactos[m, i] <- "";
+                    FinPara
+                    Escribir "Contacto eliminado.";
+                Sino
+                    Escribir "Eliminación de contacto cancelada.";
+                    m<-2;
+                FinSi
+            FinSi
+        FinPara
+        
+        si m >= filasContactos-1 Y bandera = Falso Entonces
+            Escribir "No se encontró ningún contacto con ese nombre o 
+                teléfono.";
+        FinSi
+    FinSubProceso
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>desplegar()</script>
+</body>
+</html>
