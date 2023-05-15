@@ -21,6 +21,12 @@ const portafolio = () => {
 
     agregaColorListas(items);
     agregaColorTexto(itemsEnlace);
+
+    button(items[0], "../html/pseint/pseint.html")
+    button(items[1], "../html/java/java.html")
+    button(items[2], "../html/htmlProject/html.html")
+    button(items[3], "../html/cssProject/cssProject.html")
+    button(items[4], "../html/jsProject/jsProject.html")
 }
 
 const pseint = () => {
@@ -39,9 +45,9 @@ const pseint = () => {
 const java = () => {
     const lista = document.querySelector('.listaJava');
     const items = lista.getElementsByTagName('li');
-    
+
     agregaColorListas(items);
-   
+
     button(items[0], "javaVariables.html")
     button(items[1], "javaCondicionales.html")
     button(items[2], "javaCiclos.html")
