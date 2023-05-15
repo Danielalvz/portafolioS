@@ -220,19 +220,28 @@ pre {
 
 .listaProyectos .fondoPar {
     background-color: rgb(58, 66, 83);
-    color: white;
 }
 
 .listaProyectos .fondoImpar {
     background-color: rgb(219, 225, 227);
 }
 
-.listaProyectos>li:hover {
+.listaProyectos>li:hover{
     background-color: rgb(0, 173, 253);
 }
 
-.listaProyectos>li:active {
+.listaProyectos>li:active{
     background-color: gray;
+}
+
+.enlaceProyectos {
+    text-decoration: none;
+    color: black;
+}
+
+.enlaceProyectos:hover {
+    text-decoration: none;
+    color: rgb(231, 224, 238);
 }
 
 /*--------------------------*/
