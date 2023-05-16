@@ -273,7 +273,7 @@ pre {
 /*--------------------------*/
 
 .listaPseint,
-.listaJava {
+.listaJava, .listaJs {
     padding-bottom: 20px;
 }
 
@@ -307,7 +307,6 @@ pre {
 .listaJava .fondoImpar {
     background-color: rgb(241, 176, 169);
 }
-
 
 li {
     margin-left: 13%;

@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(232, 151, 51);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Satisfy', cursive;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15%;
+
+}
+
+main {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.list {
+    padding-top: 20px;
+}
+
+ol,
+li {
+    background-color: rgb(236, 200, 164);
+    border-radius: 20px;
+}
+
+.list li:nth-child(2n) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.list li:nth-child(2n+1) {
+    background-color: #801414;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.list--alternate li:nth-child(2n) {
+    background-color: #801414;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.list--alternate li:nth-child(2n+1) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+button {
+    display: inline-block;
+    margin-top: 20px;
+    width: 30%;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: rgb(252, 141, 30);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(233, 112, 75);
+}
+
+button:active {
+    background-color: rgb(231, 211, 30);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        padding-left: 5%;
+    }
+}

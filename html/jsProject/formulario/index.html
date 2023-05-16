@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@200;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <h1>Contactenos</h1>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario</h2>
+            <div class="contenido">
+                <form>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" placeholder="Escribe tu nombre" minlength="2" name="nombre" id="nombre" required>
+
+                    <label for="email">Correo: </label>
+                    <input type="email" placeholder="Correo Electronico" name="email" id="email" required>
+
+                    <label for="asunto">Asunto: </label>
+                    <textarea name="asunto" id="asunto" cols="30" rows="1" required></textarea>
+
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+        
+                    <input type="submit" name="enviar" id="enviar" value="Enviar">
+                    <input type="reset" name="reset" id="reset" value="Reset">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>main()</script>
+</body>
+</html>

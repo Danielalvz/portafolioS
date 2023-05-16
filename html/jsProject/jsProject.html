@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Proyectos</title>
     <link rel="stylesheet" href="../../css/estiloPortafolio.css">
-    <script src="../../js/script.js"></script>
+    <script src="../../js/desplegables.js"></script>
 </head>
 
 <body>
@@ -32,64 +33,119 @@
                 <img class="gif" src="../../imagenes/js.gif" alt="Gif de dispositivos, mostrando una página">
             </div>
 
-            <p>
-                Este es un proyecto que muestra la hoja de vida en navegador,
-                usando solo la propiedad de HTML con CSS, y JavaScript.
-                Añadiendo algunas funcionalidades, al proyecto de HTML y CSS
-            </p>
-            <p>
-                Debe tener los siguientes requisitos:
-            </p>
-            <p>
-                - Crear 3 temas de colores para toda su hoja de vida y
-                permitir cambiar dichos temas por medio de alguna serie
-                de botones o como usted lo crea pertinente, lo importante
-                es poder hacer que su hoja de vida tenga 3 temas de colores
-                en el cual el usuario pueda seleccionar qué tema escoger.
-            </p>
-            <p>A continuación un ejemplo guía</p>
+            <div id="ejercicios">
+                <button class="acordeon" type="button">
+                    <h4>Formulario de contacto</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+                
+                <div class="panel">
+                    <p>
+                        1. Crear una página web el cual contenga un formulario 
+                        de contáctenos. Dicho formulario debe de llevar los 
+                        siguientes campos: Nombre de quien escribe el mensaje, 
+                        correo de quien escribe el mensaje, asunto del correo, 
+                        mensaje del correo. No olvide poner un botón para enviar, 
+                        el cual, deberá imprimir en consola la información capturada 
+                        en dicho formulario y otro botón para resetear todo el 
+                        formulario, este último botón debe de funcionar correctamente. 
+                        Si el formulario al enviarse no tiene todos los datos completos, 
+                        por favor sacar una alerta donde le diga al usuario qué datos 
+                        hacen falta.
+                    </p>
+    
+                    <a class="linkCodigo" 
+                    href="https://github.com/Danielalvz/logicaHTMLyJS/blob/main/Formulario/index.html">
+                        <img class="imgEjercicio" src="../../imagenes/Resultados/contactenos.jpg" 
+                        alt="Imagen de formulario en HTML"><br>
+                        Ver codigo, punto 1.
+                    </a>
 
-            <div class="imagenGif">
-                <img class="gif colorPickerGif" src="../../imagenes/color-picker.gif" alt="Gif de selector de color">
-            </div>
+                    <a class="linkCodigo" href="formulario/index.html">
+                        Ver Resultados.
+                    </a>
+                </div>
 
-            <p>
-                - En su hoja de vida deberá crear algo parecido a lo que se
-                llama un efecto de acordeón, por favor tenga muy presente
-                que no debe usar ninguna librería o framework externo para
-                realizar este efecto, pues lo único que se solicita es que
-                de alguna forma usted haga que cuando se le haga clic al
-                titulo o botón que usted haya determinado para dicha
-                situación, el contenido se le oculte sin necesidad de
-                efectos de animación. Esto debe ser aplicado en las páginas
-                de:
-            </p>
-            <p>
-                Experiencia laboral (el efecto debe ser aplicado sobre
-                cada experiencia, no sobre el general). <br>
-                Referencias personales (el efecto debe ser aplicado
-                sobre cada referencia, no sobre el general). <br>
-                Referencias familiares (el efecto debe ser aplicado
-                sobre cada referencia, no sobre el general). <br>
-                Estudios realizados (el efecto debe ser aplicado
-                sobre cada estudio realizado, no sobre el general).     
-            </p>
-            <p>Ejemplo de lo que se espera sin el efecto de animación</p>
+                <button class="acordeon" type="button">
+                    <h4>Lista con colores intercalados</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
 
-            <div class="imagenGif">
-                <img class="gif" src="../../imagenes/acordeon.gif" alt="Gif de menu desplegable">
-            </div>
+                <div class="panel">
+                    <p>
+                        2. Crear una lista ordenada de 10 frutas, las que usted desee, debe 
+                        de aplicar dos temas de colores seleccionables y aplicables a la 
+                        página web. El primer tema deberá seleccionar de color diferente al 
+                        habitual los elementos pares, el segundo tema deberá resaltar del color 
+                        anterior los elementos impares de la lista ordenada.
+                    </p>
 
-            <a class="linkCodigo" target="_blank" href="https://github.com/Danielalvz/cvColorPicker/blob/master/index.html">
-                Enlace al código hoja de vida con CSS y js.
-            </a>
-            <a class="linkCodigo" href="../../perfil/index.html">
-                Enlace del resultado.
-            </a>
+                    <a class="linkCodigo" 
+                    href="https://github.com/Danielalvz/logicaHTMLyJS/blob/main/Lista/index.html">
+                        <img class="imgEjercicio" src="../../imagenes/Resultados/listaIntercalada.jpg" 
+                        alt="Imagen de lista de colores en html"><br>
+                        Ver codigo, punto 2.
+                    </a>
+                    <a class="linkCodigo" href="listaColores/index.html">
+                        Ver resultados.
+                    </a>
+                </div>
+
+                <button class="acordeon" type="button">
+                    <h4>Hoja de vida con selector de colores</h4><i class="fa-solid fa-chevron-up"></i>
+                </button>
+
+                <div class="panel">
+                    <p>
+                        Este es un proyecto que muestra la hoja de vida en navegador,
+                        usando solo la propiedad de HTML con CSS, y JavaScript.
+                    </p>
+
+                    <a class="linkCodigo" href="../../perfil/index.html">
+                        <img class="imgEjercicio" src="../../imagenes/Resultados/colorPicker.jpg" 
+                        alt="Imagen de hoja de vida en html">
+                    </a>
+
+                    <p> Debe tener los siguientes requisitos:</p>
+                    <p>
+                        - Crear 3 temas de colores para toda su hoja de vida y
+                        permitir cambiar dichos temas por medio de alguna serie
+                        de botones o como usted lo crea pertinente.
+                    </p>
+                    <p>A continuación un ejemplo guía</p>
+        
+                    <div class="imagenGif">
+                        <img class="gif colorPickerGif" src="../../imagenes/color-picker.gif" alt="Gif de selector de color">
+                    </div>
+        
+                    <p>
+                        - En su hoja de vida deberá crear algo parecido a lo que se
+                        llama un efecto de acordeón, por favor tenga muy presente
+                        que no debe usar ninguna librería o framework externo. 
+                        Esto debe ser aplicado en las páginas
+                        de:
+                    </p>
+                    <p>
+                        Experiencia laboral <br>
+                        Referencias personales <br>
+                        Referencias familiares  <br>
+                        Estudios realizados     
+                    </p>
+                    <p>Ejemplo de lo que se espera sin el efecto de animación</p>
+        
+                    <div class="imagenGif">
+                        <img class="gif" src="../../imagenes/acordeon.gif" alt="Gif de menu desplegable">
+                    </div>
+        
+                    <a class="linkCodigo" target="_blank" href="https://github.com/Danielalvz/cvColorPicker/blob/master/index.html">
+                        Enlace al código hoja de vida con CSS y js.
+                    </a>
+                    <a class="linkCodigo" href="../../perfil/index.html">
+                        Enlace del resultado.
+                    </a>      
+                </div>
+            </div>  
         </section>
-
     </main>
-    <script>pseint()</script>
+    <script>desplegar()</script>
 </body>
 
 </html>
