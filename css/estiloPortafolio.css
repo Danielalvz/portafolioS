@@ -358,6 +358,10 @@ li {
         font-size: 15px;
     }
 
+    h2 {
+        font-size: 20px;
+    }
+
     .linkProyectos {
         font-size: 12px;
     }
@@ -388,16 +392,13 @@ li {
         padding: 10px 10%;
     }
 
-
     p {
         padding: 10px 40px;
     }
 
-
     .codigo {
         margin-left: 1px;
         padding-top: 10px;
-
     }
 
     pre {
@@ -406,7 +407,15 @@ li {
     }
 
     li {
-        margin-left: 20px;
+        margin-left: 30px;
+    }
+
+    .video {
+        padding: 20px 0; 
+    }
+    
+    iframe {
+        width: 80%;
     }
 }
 
@@ -442,6 +451,7 @@ li {
     h2 {
         padding-top: 40px;
         padding-bottom: 10px;
+        
     }
 
     .linkProyectos {
@@ -449,6 +459,7 @@ li {
     }
 
     .linkCodigo {
+        display: inline-block;
         font-size: 10px;
         padding: 10px 10%;
         width: auto;
