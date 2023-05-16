@@ -163,6 +163,42 @@ p {
     padding: 10px 60px;
 }
 
+.enlaceProyectos {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    width: 50%;
+    margin-left: 17%;
+    padding: 20px 7%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.fondoPar {
+    background-color: rgb(58, 66, 83);
+    color: aliceblue;
+}
+
+.fondoImpar {
+    background-color: rgb(219, 225, 227);
+    color: rgba(0, 0, 0, 0.637);
+}
+
+.enlaceProyectos:hover {
+    background-color: rgb(0, 173, 253);
+    color: aliceblue;
+}
+
+.enlaceProyectos:active {
+    background-color: gray;
+    color: rgba(0, 0, 0, 0.637);
+}
+
 .linkCodigo {
     color: blue;
     font-size: 20px;
@@ -234,18 +270,10 @@ pre {
     background-color: gray;
 }
 
-.enlaceProyectos {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.637);
-}
-
-.enlacePar {
-    color: rgb(255, 255, 255);
-}
-
 /*--------------------------*/
 
-.listaPseint, .listaJava{
+.listaPseint,
+.listaJava {
     padding-bottom: 20px;
 }
 
@@ -293,3 +321,4 @@ li {
     border-radius: 40px;
     cursor: pointer;
 }
+

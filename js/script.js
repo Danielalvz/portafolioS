@@ -15,18 +15,21 @@ const button = (elemento, link) => {
 }
 
 const portafolio = () => {
-    const lista = document.querySelector('.listaProyectos');
-    const items = lista.getElementsByTagName('li');
-    const itemsEnlace = lista.getElementsByTagName('a');
+    // const lista = document.querySelector('.listaProyectos');
+    // const items = lista.getElementsByTagName('li');
+    // const itemsEnlace = lista.getElementsByTagName('a');
+    const itemsProyectos = document.querySelectorAll('.enlaceProyectos');
 
-    agregaColorListas(items);
-    agregaColorTexto(itemsEnlace);
+    // agregaColorListas(items);
+    // agregaColorTexto(itemsEnlace);
 
-    button(items[0], "../html/pseint/pseint.html")
-    button(items[1], "../html/java/java.html")
-    button(items[2], "../html/htmlProject/html.html")
-    button(items[3], "../html/cssProject/cssProject.html")
-    button(items[4], "../html/jsProject/jsProject.html")
+    agregaColorListas(itemsProyectos);
+
+    // button(items[0], "../html/pseint/pseint.html")
+    // button(items[1], "../html/java/java.html")
+    // button(items[2], "../html/htmlProject/html.html")
+    // button(items[3], "../html/cssProject/cssProject.html")
+    // button(items[4], "../html/jsProject/jsProject.html")
 }
 
 const pseint = () => {
@@ -66,13 +69,13 @@ const agregaColorListas = (items) => {
     }
 }
 
-const agregaColorTexto = (items) => {
-    for (let i = 0; i < items.length; i++) {
-        if (i % 2 === 0) { //PAR
-            items[i].classList.add('enlacePar');
-        }
-    }
-}
+// const agregaColorTexto = (items) => {
+//     for (let i = 0; i < items.length; i++) {
+//         if (i % 2 === 0) { //PAR
+//             items[i].classList.add('enlacePar');
+//         }
+//     }
+// }
 
 
 
