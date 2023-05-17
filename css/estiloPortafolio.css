@@ -215,6 +215,11 @@ p {
     width: 60%;
 }
 
+.matriz {
+    width: 60%;
+    padding-left: 20%;
+}
+
 .imgPequenaEjercicio {
     width: 20%;
 }
@@ -405,7 +410,12 @@ li {
     }
 
     .imgEjercicio {
-        width: 270px;
+        padding-left: 30px;
+        width: 100%;
+    }
+    
+    .imgPequenaEjercicio {
+        width: 70px;
     }
 
     .imgEjercicio,
@@ -539,6 +549,6 @@ li {
     }
 
     pre {
-        font-size: 5px;
+        font-size: 7px;
     }
 }
