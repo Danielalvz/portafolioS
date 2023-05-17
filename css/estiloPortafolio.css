@@ -485,7 +485,7 @@ li {
     h1 {
         top: 6%;
         left: 20%;
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .imagenMenu {
@@ -495,11 +495,11 @@ li {
     }
 
     .menu {
-        padding-left: 55%;
+        padding-left: 45%;
     }
 
     .linkNav {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     section {
